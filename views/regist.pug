@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  form(action='/users/reg',method='post')
+    label   账号
+        input(type='text',name='account')
+    br/
+    label   密码
+        input(type='text',name='pwd')
+    br/
+    input(type='submit',value='注册')

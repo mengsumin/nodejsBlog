@@ -1,0 +1,25 @@
+extends header
+block header
+    if account
+        div 欢迎#{account}
+    else
+        div
+            a(href='/users/login')
+            a(href='/users/reg') 
+    div
+        input(type='text/',id='blog',style='width:400px')
+        input(type='button',value='发布',id='post')
+    div
+    div(id='blogs',class='clearFix')
+      if Blogs
+        each item in Blogs
+            div(class='list-group-item')
+                a(href='#')
+                    h4 #{item.BY+':'}
+                li #{item.content}
+                li #{item.date}
+
+
+    script(src='http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js')
+    script(type='text/javascript',src='/javascripts/index.js')
+

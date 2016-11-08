@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    nav(class='navbar,navbar-default',role='navigation')
+        div(class='container-fluid')
+        div(class='navbar-header')
+            a(href='#',class='navbar-brand') 欢迎来到博客
+        div
+            ul(class=nav navbar-nav)
+                li(class='active')
+                    a(href='#') HTML
+                li
+                    a(href='#') CSS
+                li
+                    a(href='#') JS
+                li(class='dropdow')
+                    a(href='#',class='dropdown-toggle',data-toggle='dropdown')  登陆
+                        b(class='caret')
+                    ul(class='dropdown-menu')
+                        form(action='/users/login',method='post')
+                            label 账号
+                                input(type='text',name='account')
+                            br/
+                            label 密码
+                                input(type='password',name='pwd')
+                            br/
+                            input(type='submit' value='登陆')
+                   

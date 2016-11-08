@@ -1,0 +1,13 @@
+@media (min-width: 768px){
+    .containner{width: 750px;}
+    body{background-color: red;}
+}
+
+@media (min-width: 992px){
+     .containner{width: 970px;}
+     body{background-color: yellow;}
+}
+@media (min-width: 1200px){
+     .containner{width: 1170px;}
+     body{background-color: green;}
+}
